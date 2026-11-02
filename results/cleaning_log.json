@@ -1,0 +1,62 @@
+{
+  "CM1": {
+    "modules_raw": 498,
+    "defective_raw": 49,
+    "removed_missing_label": 0,
+    "removed_exact_duplicates": 56,
+    "modules_clean": 442,
+    "defective_clean": 48,
+    "defect_rate_clean": 0.1085972850678733,
+    "missing_metric_cells": 0,
+    "rows_with_missing_metric": 0,
+    "inconsistent_records_after_cleaning": 2,
+    "n_metrics": 21,
+    "file": "cm1.arff",
+    "sha256": "fbd4a74687d24350ee90b67211698c15406be0b6e435b98f5039e94302b97f09"
+  },
+  "JM1": {
+    "modules_raw": 10885,
+    "defective_raw": 2106,
+    "removed_missing_label": 0,
+    "removed_exact_duplicates": 1973,
+    "modules_clean": 8912,
+    "defective_clean": 2007,
+    "defect_rate_clean": 0.2252019748653501,
+    "missing_metric_cells": 25,
+    "rows_with_missing_metric": 5,
+    "inconsistent_records_after_cleaning": 176,
+    "n_metrics": 21,
+    "file": "jm1.arff",
+    "sha256": "8ac4744e0807b49158964a05f1066da3a9e7f8fa27f47a52e80031e7942c5d97"
+  },
+  "KC1": {
+    "modules_raw": 2109,
+    "defective_raw": 326,
+    "removed_missing_label": 0,
+    "removed_exact_duplicates": 897,
+    "modules_clean": 1212,
+    "defective_clean": 315,
+    "defect_rate_clean": 0.2599009900990099,
+    "missing_metric_cells": 0,
+    "rows_with_missing_metric": 0,
+    "inconsistent_records_after_cleaning": 40,
+    "n_metrics": 21,
+    "file": "kc1.arff",
+    "sha256": "82fa208e6fc2c3b96072401c11c077897f713d8d93f7ad4cda89b8e4636bb5c0"
+  },
+  "PC1": {
+    "modules_raw": 1109,
+    "defective_raw": 77,
+    "removed_missing_label": 0,
+    "removed_exact_duplicates": 155,
+    "modules_clean": 954,
+    "defective_clean": 70,
+    "defect_rate_clean": 0.07337526205450734,
+    "missing_metric_cells": 0,
+    "rows_with_missing_metric": 0,
+    "inconsistent_records_after_cleaning": 12,
+    "n_metrics": 21,
+    "file": "pc1.arff",
+    "sha256": "b57312981180a748de4fc618e8c1173e01fc9d5c9923048e1aaa2d4572a95b35"
+  }
+}

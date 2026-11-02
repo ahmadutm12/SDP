@@ -1,0 +1,17 @@
+dataset,approach,n_selected_mean,n_selected_min,n_selected_max,removed_mean,removed_min,removed_max,sel_sec_mean,geo_evals
+CM1,duplicate,21.0,21,21,1.64,0,2,0.004,
+CM1,geo,10.22,4,15,0.0,0,0,0.752,40.36
+CM1,infotheory,8.3,5,15,0.0,0,0,0.063,
+CM1,none,21.0,21,21,0.0,0,0,0.002,
+JM1,duplicate,21.0,21,21,142.6,124,162,0.012,
+JM1,geo,11.12,6,17,0.0,0,0,7.787,40.4
+JM1,infotheory,10.7,5,15,0.0,0,0,0.594,
+JM1,none,21.0,21,21,0.0,0,0,0.009,
+KC1,duplicate,21.0,21,21,32.52,26,40,0.005,
+KC1,geo,10.26,5,15,0.0,0,0,1.198,40.36
+KC1,infotheory,11.8,5,15,0.0,0,0,0.1,
+KC1,none,21.0,21,21,0.0,0,0,0.002,
+PC1,duplicate,21.0,21,21,9.64,6,12,0.004,
+PC1,geo,10.56,5,15,0.0,0,0,1.162,41.32
+PC1,infotheory,12.9,5,15,0.0,0,0,0.093,
+PC1,none,21.0,21,21,0.0,0,0,0.002,
