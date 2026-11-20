@@ -1,0 +1,16 @@
+Revision 1 (CMC 96252): nested IG selection, corrected CIs, sensitivity runs
+
+- IG ranking, discretisation, imputation and scaling are now fitted inside each
+  inner training split; the final ranking uses the outer training fold only.
+  The previous code ranked metrics and chose k on the whole outer training fold.
+- GEO preprocessing is refitted per inner split (GEO used no outer-test labels before).
+- Rename "duplicate-bug-report-based" to inconsistent-record removal (metrics only).
+- New runner (run_experiments.py) with 13 named configurations, reference outputs in
+  results_rev1/, analysis tables and figures (make_tables_rev1.py, make_figures_rev1.py).
+- Corrected repeated-CV t intervals, paired and unpaired A12, threshold grid,
+  Nogueira stability, train-vs-test MCC, RQ2 variance decomposition.
+- Sensitivity: duplicates kept, IG bins 5/20, fixed k 5/10/15, GEO 20x50,
+  classifier-matched selection, KC1 permutation importance, train/test overlap.
+- verify_rerun.py and check_headlines.py for independent reruns; manifest_rev1.json
+  records versions, seeds, data SHA-256 and output SHA-256.
+- Previous code and results are kept unchanged for comparison.

@@ -1,0 +1,269 @@
+{
+ "study": "CMC submission 96252, revision 1",
+ "protocol": {
+  "cv": "5 x 10 repeated stratified k-fold (sklearn RepeatedStratifiedKFold, random_state=42)",
+  "fold_seed": "42 + 1000*repeat + fold",
+  "smote": "k=5, training fold only",
+  "inner_folds": 3,
+  "confidence_interval": "corrected repeated-CV t interval (Bouckaert & Frank 2004; Nadeau & Bengio 2003), df = 49"
+ },
+ "environment": {
+  "python": "3.11.18",
+  "numpy": "2.4.6",
+  "pandas": "3.1.0",
+  "scipy": "1.17.1",
+  "scikit_learn": "1.9.1",
+  "imbalanced_learn": "0.14.2",
+  "xgboost": "3.4.2",
+  "joblib": "1.6.0",
+  "matplotlib": "3.11.2",
+  "statsmodels": "0.15.0",
+  "os": "Windows 11 (10.0.22631), 8 logical CPUs, runs used n_jobs=6"
+ },
+ "data": {
+  "CM1": {
+   "file": "data/cm1.arff",
+   "sha256": "fbd4a74687d24350ee90b67211698c15406be0b6e435b98f5039e94302b97f09",
+   "modules_raw": 498,
+   "defective_raw": 49,
+   "modules_after_dedup": 442,
+   "defective_after_dedup": 48
+  },
+  "JM1": {
+   "file": "data/jm1.arff",
+   "sha256": "8ac4744e0807b49158964a05f1066da3a9e7f8fa27f47a52e80031e7942c5d97",
+   "modules_raw": 10885,
+   "defective_raw": 2106,
+   "modules_after_dedup": 8912,
+   "defective_after_dedup": 2007
+  },
+  "KC1": {
+   "file": "data/kc1.arff",
+   "sha256": "82fa208e6fc2c3b96072401c11c077897f713d8d93f7ad4cda89b8e4636bb5c0",
+   "modules_raw": 2109,
+   "defective_raw": 326,
+   "modules_after_dedup": 1212,
+   "defective_after_dedup": 315
+  },
+  "PC1": {
+   "file": "data/pc1.arff",
+   "sha256": "b57312981180a748de4fc618e8c1173e01fc9d5c9923048e1aaa2d4572a95b35",
+   "modules_raw": 1109,
+   "defective_raw": 77,
+   "modules_after_dedup": 954,
+   "defective_after_dedup": 70
+  }
+ },
+ "data_source": "https://github.com/ApoorvaKrisna/NASA-promise-dataset-repository, commit 3898d21e287c130c76d458faf65793d32483076d",
+ "runs": {
+  "geo_p20_i50": {
+   "wall_minutes": 54.2,
+   "fold_rows": 600,
+   "approaches": [
+    "geo"
+   ],
+   "classifiers": [
+    "DT",
+    "RF",
+    "XGBoost"
+   ],
+   "folds_sha256": "617c07dfd5a2f365a1ffc0ddd754488409d4ea65d327337a098eff0944c99e45",
+   "selection_sha256": "03aa0575abd4969afb612478b8ff7825516c305d29e4474d0b0cfb81a2a73c4c"
+  },
+  "ig_bins20": {
+   "wall_minutes": 7.6,
+   "fold_rows": 600,
+   "approaches": [
+    "infotheory"
+   ],
+   "classifiers": [
+    "DT",
+    "RF",
+    "XGBoost"
+   ],
+   "folds_sha256": "4a8023ca37b6faed6c2a2b288051341d075a2d1b6b1964780a6b03ceb04e3eb5",
+   "selection_sha256": "b3a6fcf24d8993b5d0d08710c230ddeeccf88f1df6fcdce6ab0aeffc6c8fafc3"
+  },
+  "ig_bins5": {
+   "wall_minutes": 7.3,
+   "fold_rows": 600,
+   "approaches": [
+    "infotheory"
+   ],
+   "classifiers": [
+    "DT",
+    "RF",
+    "XGBoost"
+   ],
+   "folds_sha256": "cde4f672a2fe12ab228602f72a6df88d83e531260ae52027b4af48149787a961",
+   "selection_sha256": "3155577471b7e2953c9ed6d73e671be74373491ab9cdd9194d106807cf0fe58a"
+  },
+  "ig_k10": {
+   "wall_minutes": 6.6,
+   "fold_rows": 600,
+   "approaches": [
+    "infotheory"
+   ],
+   "classifiers": [
+    "DT",
+    "RF",
+    "XGBoost"
+   ],
+   "folds_sha256": "2c935ef34f9bd0633b248add32e5529e19960f61e444d37687139e9f625fdff2",
+   "selection_sha256": "29f09ae3baa61fcaf006ef4280d779ce35866e42ff58c5a582b1399702d547d3"
+  },
+  "ig_k15": {
+   "wall_minutes": 7.1,
+   "fold_rows": 600,
+   "approaches": [
+    "infotheory"
+   ],
+   "classifiers": [
+    "DT",
+    "RF",
+    "XGBoost"
+   ],
+   "folds_sha256": "04f3ef78b2c31d9a4f3d73047de434b953c706c526ee99d53a18727dd96dd96a",
+   "selection_sha256": "f6e43ba70189fbcc602ff39c1ea553c35b125133cd7cf2fc694a9a72504a5f99"
+  },
+  "ig_k5": {
+   "wall_minutes": 5.1,
+   "fold_rows": 600,
+   "approaches": [
+    "infotheory"
+   ],
+   "classifiers": [
+    "DT",
+    "RF",
+    "XGBoost"
+   ],
+   "folds_sha256": "c6a0f2857d1cd168f358f702b3b052c9f3116a5fb531e77b1f221e8aeda15c17",
+   "selection_sha256": "8206011de3403dea16d1b15bedaaa00d2dafd6c358f933cd0ea68f66bdfa357e"
+  },
+  "main": {
+   "wall_minutes": 82.0,
+   "fold_rows": 3200,
+   "approaches": [
+    "none",
+    "inconsistent",
+    "geo",
+    "infotheory"
+   ],
+   "classifiers": [
+    "DT",
+    "RF",
+    "XGBoost",
+    "SVM"
+   ],
+   "folds_sha256": "b49da0cfa9696af96c2a6ebe6d691c35fb7990beb33977b2d79db1754ae56900",
+   "selection_sha256": "8a5fc319a18a8a23030c62a49b61f3c56da487293469e75f9e5dbb6e6be82c57"
+  },
+  "matched_geo_XGB": {
+   "wall_minutes": 37.3,
+   "fold_rows": 200,
+   "approaches": [
+    "geo"
+   ],
+   "classifiers": [
+    "XGBoost"
+   ],
+   "folds_sha256": "66d97f53033ce8842a888d9b5f8efe38407fc5543388a0989e402f6dc60b847a",
+   "selection_sha256": "9f9301d56481a64874bb4382f2d1d98bda798d9952f5e8be5467d67d6e7e2cb0"
+  },
+  "matched_ig_RF": {
+   "wall_minutes": 18.6,
+   "fold_rows": 200,
+   "approaches": [
+    "infotheory"
+   ],
+   "classifiers": [
+    "RF"
+   ],
+   "folds_sha256": "cfde0dbd44ba11c9bf729593165d37ab1c43f8a6a81b08c56e6a7afb876069f2",
+   "selection_sha256": "8e3b0905b0193e457352ff9b72827991c21a4c9e7ba595d281b0fa42a89e5183"
+  },
+  "matched_ig_XGB": {
+   "wall_minutes": 3.7,
+   "fold_rows": 200,
+   "approaches": [
+    "infotheory"
+   ],
+   "classifiers": [
+    "XGBoost"
+   ],
+   "folds_sha256": "7f55adf8eee218e2ec9edc428c06cf31492b014d0b4881b0a350c70215d33107",
+   "selection_sha256": "c7f52a13b6ec5cfa976428485de146f8010a70fd158726e301f288bd78348f4b"
+  },
+  "nodedup": {
+   "wall_minutes": 23.9,
+   "fold_rows": 2400,
+   "approaches": [
+    "none",
+    "inconsistent",
+    "geo",
+    "infotheory"
+   ],
+   "classifiers": [
+    "DT",
+    "RF",
+    "XGBoost"
+   ],
+   "folds_sha256": "b8f2f31d835bf50e01439b048a458ec9d8eea9d200e9009d1a55e2d681f3f42b",
+   "selection_sha256": "f33773e488b610a4072d17a0fd2f5710b8c029a4416ee9563896e30faa7bc56f"
+  },
+  "nodedup_svm_none": {
+   "wall_minutes": 11.4,
+   "fold_rows": 200,
+   "approaches": [
+    "none"
+   ],
+   "classifiers": [
+    "SVM"
+   ],
+   "folds_sha256": "7978df86b7fb4d103bb530fd84f8d1eeeb3832329b43e46e61ff61cfe150055e",
+   "selection_sha256": "18c5ba2e33094cf42e92cb4ac8f0188a32c5a4785cb244b37934062283e6ecd2"
+  },
+  "v03ref_ig": {
+   "wall_minutes": 16.1,
+   "fold_rows": 800,
+   "approaches": [
+    "infotheory"
+   ],
+   "classifiers": [
+    "DT",
+    "RF",
+    "XGBoost",
+    "SVM"
+   ],
+   "folds_sha256": "fd798412a43af3ff5cd4870fbe28cea3d5da36e7e40125a74a2e2708b4cc0d5b",
+   "selection_sha256": "335994ee3b5f91b8c365c460e3bf85bdd65f3a858a8f685a5f6fca0ce340f8f0"
+  }
+ },
+ "kc1_importance": {
+  "wall_minutes": 1.1,
+  "file": "kc1_permutation_importance.csv",
+  "sha256": "2f77cdca7e1f02a6e308efe72a93b9ca4b697f01c1c589e9b9c979c1d5e76861"
+ },
+ "total_wall_minutes": 282.0,
+ "tables_sha256": {
+  "cleaning_before_after.csv": "1802d4f670988cdc85006ca76fa8bcf88a4423afdeedbf9aec7f0c1be29c6c30",
+  "fix_effect_ig.csv": "57c68fb05956a608babe43b89d17ef47c70354ecb9f1fe10b1e0db199827fcaf",
+  "fix_k_changes.csv": "3da5a121d82a6b17a39ff497874341d2942e92aedf5eeabfd9710c832dafbe15",
+  "kc1_xgb_importance_vs_ig_drop.csv": "972965a8038922bb0b7b4469d2419613ad722f459825d67a8e578e58a1f36f86",
+  "main_effects_vs_none.csv": "5b8a61afe099768e69152942b0cb9c7fda5a5a81b668835c7a6185e9a4403eff",
+  "main_friedman_mcc.csv": "36e7325269b8e4635a034fa41b0dbf5408dc635390717993a64ee05e8a90c4a4",
+  "main_mean_sd.csv": "052b9667119bd6b7a2c039c15f38923caac3c61dab82b0042e75e3f1629cb079",
+  "main_wilcoxon_holm_mcc.csv": "a501125cc31f4e4490778120a8b102542780e5e752e537193d1bb4820ffb2b85",
+  "matched_vs_dt.csv": "1ce5edf026ea00b0c4753d2ee97c027e940b864d5e9b718420b263609c1e9846",
+  "nodedup_effects.csv": "0007c26e58c0fc0306ef2838705f49192718a830196445ba97d4e65afc93dc82",
+  "overfitting.csv": "041ae606365d5a20a35814477f3383fde8f8e940d61208158e8d28e2d98afc51",
+  "rq2.csv": "804fe75f69d40d7c432cc8519aacfa55d3bef7ab72bfa80a5c205bede2d0ae5e",
+  "selection_frequency.csv": "3345caf5b31e086b4cb6881d8a4323837ea965495bec006e42718d12d0cc1a15",
+  "selector_sensitivity_effects.csv": "4917922766edb63fd537a48d6a9ef6f494a31299f6500e09f8bbcd328509ee19",
+  "selector_sensitivity_summary.csv": "534c9aef4b5fa21f2d6dade9de76cd4751b7393a950c09d72c86069fa1174e04",
+  "stability.csv": "96337c7c65a0e4c5b83e6dd84889df932490101815ab8b67d1d0c2cefb852b3f",
+  "stability_sensitivity.csv": "4d38f9d0682858ef92309a5466296f68313541ffd42b614be2fe9d541498cf17",
+  "threshold_grid.csv": "58aa74c7c567c21403fad7e19d9c0d80c09c71982b55a51749db786aed4ad8a5",
+  "train_test_vector_overlap.csv": "fb97b61f2896661ed303b775febfe36f9a122815c341520853da263237c7e2eb"
+ }
+}
